@@ -189,7 +189,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		{
 			selectedRadio = wmId - ID_BUTTON_KEYGEN1 + 1; // Update selected radio button
 			// Clear the serial field when a radio button is selected
-			//SetDlgItemText(hWnd, ID_EDIT_SERIAL, L"");
+			SetDlgItemText(hWnd, ID_EDIT_SERIAL, L"");
 		}
 		// Handle Generate button click
 		else if (wmId == ID_BUTTON_GENERATE)
