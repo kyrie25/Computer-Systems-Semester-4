@@ -32,3 +32,5 @@
 *.app
 
 .vscode
+.vs
+x64
