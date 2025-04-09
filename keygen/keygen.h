@@ -10,6 +10,8 @@
 #include <bitset>
 #include <map>
 #include <functional>
+#include <unordered_map>
+#include <cmath>
 
 std::string keygen1(const std::string &input);
 std::string keygen2(const std::string &input);
