@@ -309,7 +309,6 @@ INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 	switch (message)
 	{
 	case WM_INITDIALOG:
-		SetDlgItemText(hDlg, IDD_KEYGEN_DIALOG, L"Your new text here");
 		return (INT_PTR)TRUE;
 
 	case WM_COMMAND:
