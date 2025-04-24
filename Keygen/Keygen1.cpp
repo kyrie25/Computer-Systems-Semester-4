@@ -71,7 +71,5 @@ std::string keygen1(const std::string& input, std::string& error)
     // Create output
     std::vector<int> numbers = { number1, number2, number3, number4, number5, number6, number7, number8, number9 };
     std::string result = convertToString(numbers);
-    std::cout << "The generated word is: " << result << std::endl;
-
-	return input;
+	return result;
 }
