@@ -79,17 +79,19 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
 	return RegisterClassExW(&wcex);
 }
 
-//
-//   FUNCTION: InitInstance(HINSTANCE, int)
-//
-//   PURPOSE: Saves instance handle and creates main window
-//
 BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
 	hInst = hInstance; // Store instance handle in our global variable
 
+	int windowWidth = 300;
+	int windowHeight = 200;
+	int screenWidth = GetSystemMetrics(SM_CXSCREEN);
+	int screenHeight = GetSystemMetrics(SM_CYSCREEN);
+	int posX = (screenWidth - windowWidth) / 2;
+	int posY = (screenHeight - windowHeight) / 2;
+
 	HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX,
-		CW_USEDEFAULT, 0, 300, 200, nullptr, nullptr, hInstance, nullptr);
+		posX, posY, windowWidth, windowHeight, nullptr, nullptr, hInstance, nullptr);
 
 	if (!hWnd)
 	{
