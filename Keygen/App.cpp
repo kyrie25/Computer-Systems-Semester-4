@@ -229,7 +229,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					}
 				}
 				// Resize window for matrix layout.
-				SetWindowPos(hWnd, nullptr, 0, 0, 260, 220, SWP_NOMOVE);
+				SetWindowPos(hWnd, nullptr, 0, 0, 250, 220, SWP_NOMOVE);
 			}
 			else
 			{
@@ -242,11 +242,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 						hWnd, (HMENU)ID_STATIC_NAME, hInst);
 					CreateControlWithFont(L"EDIT", L"",
 						WS_CHILD | WS_VISIBLE | WS_BORDER,
-						70, 40, 150, 20,
+						70, 40, 160, 20,
 						hWnd, (HMENU)ID_EDIT_NAME, hInst);
 					CreateControlWithFont(L"EDIT", L"",
 						WS_CHILD | WS_VISIBLE | WS_BORDER | ES_READONLY,
-						70, 70, 150, 20,
+						70, 70, 160, 20,
 						hWnd, (HMENU)ID_EDIT_SERIAL, hInst);
 				}
 				else
@@ -270,7 +270,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 					}
 				}
 				// Resize window back to original size.
-				SetWindowPos(hWnd, nullptr, 0, 0, 260, 200, SWP_NOMOVE);
+				SetWindowPos(hWnd, nullptr, 0, 0, 275, 200, SWP_NOMOVE);
 				// Clear the serial field.
 				SetDlgItemText(hWnd, ID_EDIT_SERIAL, L"");
 			}
